@@ -1,0 +1,19 @@
+.bukit-biak {
+    .badge {
+        padding: .25em .617em;
+        border-radius: 1em;
+
+        a {
+            color: #fff;
+        }
+
+        &.badge-primary {
+            background-color: $main-color;
+        }
+
+        // &.badge-outline-primary {
+        //     box-shadow: 0 0 0 1px $main-color inset ;
+        //     color: $main-color;
+        // }
+    }
+}

@@ -1,0 +1,6 @@
+@mixin d-flex($items-center, $justify-content-center) {
+    display: flex;
+    align-items: $items-center;
+    justify-content : $justify-content-center;
+    
+}

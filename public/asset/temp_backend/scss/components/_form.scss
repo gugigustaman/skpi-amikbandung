@@ -1,0 +1,274 @@
+/*START-FORM*/
+.bukit-biak {
+    .form-group {
+        margin-bottom: $dt-1;
+
+
+
+        label {
+            &.absolute {
+                position: absolute;
+                top: 12px;
+                left: 15px;
+                padding: 5px 10px;
+                margin-bottom: 0;
+            }
+
+        }
+
+
+
+        .input-group {
+            label {
+                +.form-control {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    border-left-width: 1px;
+                    border-style: solid;
+                }
+            }
+
+            .input-group-text {
+                color: $third-text-color;
+                border: 1px solid $border-color;
+                border-radius: 4px;
+                background-color: transparent;
+                align-items: center;
+                transition: .3s;
+
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+
+            >.input-group-prepend {
+                margin-right: -1px;
+
+                .input-group-text {
+                    border-right: none;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+
+                + label{
+                    left: 45px;
+                    +.form-control {
+                        border-left: 0;
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                        border-top-right-radius: 4px;
+                        border-bottom-right-radius: 4px;
+                        border-right-width: 1px;
+                        border-style: solid;
+                    }
+                }
+            }
+
+            >.input-group-append {
+                margin-left: -1px;
+
+                .input-group-text {
+                    border-left: none;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+
+
+        }
+
+        %focused-completed {
+            background-color: #fff;
+            top: -10px;
+            font-size: .85em;
+            z-index: 4;
+        }
+
+        &.focused {
+            label.absolute {
+                @extend %focused-completed;
+            }
+
+            .input-group-text {
+                border-color: $main-color;
+            }
+
+            .form-control {
+                color: $secondary-text-color;
+                border-color: $main-color;
+                outline: 0;
+                background-color: transparent;
+                box-shadow: none;
+            }
+        }
+
+        &.completed {
+            label.absolute {
+                @extend %focused-completed;
+            }
+        }
+
+    }
+    %form-control {
+        display: block;
+        font-size: .875rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $secondary-text-color;
+        height: auto;
+        min-height: calc(1.5em + 1.25rem + 2px) !important;
+        padding: .525rem .75rem !important;
+        border: 1px solid $border-color;
+        border-radius: .25rem;
+        background: {
+            color: transparent;
+            clip: padding-box;
+        }
+        transition: $trs-3;
+        box-shadow: 0 3px 2px rgba(233, 236, 239, .05);
+        z-index: 3;
+
+    }
+
+    label {
+        position: relative;
+        color: $secondary-text-color;
+        line-height: 1.7;
+        font-size: .89em;
+        transition: $trs-3;
+        background-color: transparent;
+        padding: 5px 0;
+        margin-bottom: .5rem;
+        z-index: 2;
+    }
+
+    .form-control {
+        @extend %form-control ;
+    }
+
+    .select2 {
+        &.select2-container--focus {
+            .select2-selection {
+                padding: 7px !important;
+                border-color: $main-color !important;
+            }
+        }
+        .select2-selection {
+            @extend %form-control;
+             padding: 7px !important;
+
+            .select2-selection__choice {
+                margin: 3px;
+                background-color: $main-color;
+                border: none;
+                color: #fff;
+            }
+
+            .select2-selection__choice__remove {
+                border: none;
+                color: $secondary-color;
+
+                &:hover {
+                    background-color: $main-color;
+                    color: $secondary-color;
+                }
+            }
+
+        }
+
+    }
+
+    .select2-container {
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $main-color !important;
+        }
+
+        .select2-results__option--selected {
+            background-color: #f3f3f3;
+        }
+    }
+
+
+    .custom-control {
+        &.custom-checkbox {
+            cursor: pointer;
+            color: $secondary-text-color;
+
+            .custom-control-input{
+
+                &:checked {
+                    ~.custom-control-label {
+                        &::before {
+                            border: none;
+                            background-color: $secondary-color;
+                        }
+                    }
+                }
+                &:focus {
+                    ~.custom-control-label {
+                        &::before {
+                            box-shadow: none;
+                            border-color: rgba(24,28,33,0.1);
+                        }
+                    }
+                }
+                &:active {
+                    ~.custom-control-label {
+                        &::before {
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            .custom-control-label {
+                position: relative;
+                padding-left: 25px;
+
+                &::before {
+                    border: none;
+                    background-color : #f1f1f1;
+                }
+            }
+        }
+    }
+
+    .invalid-feedback {
+        padding: 5px;
+        color: #ff0000;
+        background-color: #fff;
+    }
+
+    .custom-file-input {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .custom-file-label {
+        @extend %form-control ;
+    }
+
+    .custom-file-label::after{
+        background-color: $main-color;
+        color: #fff;
+        line-height: 24px;
+        position: absolute;
+        z-index: 3;
+        top: -1px;
+        right: -1px;
+        bottom: 0;
+        height: calc(100% + 2px);
+        padding: 0 20px;
+        content: 'Browse';
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+        font-size: .80rem;
+        cursor: pointer;
+        border: 0;
+        display: flex;
+        align-items: center;
+    }
+}
+
+

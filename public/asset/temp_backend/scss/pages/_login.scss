@@ -1,0 +1,155 @@
+/*START-LOGIN*/
+.bukit-biak {
+    .authentication-3 {
+        padding: .75em 0;
+        background-color: $main-color;
+
+        .authentication-inner {
+            overflow: hidden;
+
+            .banner-signbox {
+                position: relative;
+                border-radius: 30px;
+                background: {
+                    image :  url(../img/bg-footer.jpg);
+                    position: bottom;
+                    repeat: no-repeat;
+                    size: contain;
+                    color: #fff;
+                }
+                padding-bottom: 10em !important;
+                justify-content: center;
+
+                .logo-box {
+                    position: relative;
+                    width: 200px;
+                    max-width: 100%;
+                    margin-bottom: $dt-1 / 2;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .title-box {
+                    h2 {
+                        font-weight: 300;
+                        margin: 20px 0 10px;
+                    }
+                }
+
+                .title-box {
+                    h2 {
+                        span {
+                            font-family: $font-title;
+                        }
+                    }
+                }
+
+
+
+
+            }
+
+            @media screen and (max-width: $breakpoint-lg) {
+                .banner-signbox {
+                    border-radius: 15px;
+                }
+            }
+
+            @media only screen and (max-width: $breakpoint-xl) and (min-width: $breakpoint-md) {
+                .banner-signbox {
+                    height: calc(100vh - 70px) !important;
+                }
+            }
+
+            .form-signbox {
+                .logo-box-form {
+                    position: relative;
+                    width: 150px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+                .form-group{
+                    label {
+                        color: #fff;
+                    }
+
+                    .form-control {
+                        color: #fff;
+                        border-color: #fff;
+
+                        &::placeholder {
+                            color: rgba(255, 255, 255,.5);
+                        }
+                    }
+
+                    .input-group-text {
+                        color: $secondary-color;
+                        border-color: #fff;
+                    }
+
+                    &.focused {
+                        .input-group-text {
+                            border-color: $secondary-color;
+                        }
+                        label.absolute {
+                            background-color: $main-color;
+                        }
+
+                        .form-control {
+                            border-color: $secondary-color;
+                            color: #fff;
+                        }
+                    }
+
+                    &.completed {
+                        label.absolute {
+                            background-color: $main-color;
+                        }
+                    }
+                }
+
+
+            }
+
+            .logo-4vm {
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                color: #fff;
+
+                a {
+                    position: relative;
+                    width: 100px;
+                    margin-left: 10px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            @media screen and (min-width: $breakpoint-xl) {
+                .logo-4vm {
+                    position: absolute;
+                    left: 0;
+                    bottom: $dt-1;
+                }
+            }
+
+        }
+
+
+
+
+    }
+}
+
+

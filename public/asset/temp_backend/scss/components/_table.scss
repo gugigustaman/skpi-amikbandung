@@ -1,0 +1,166 @@
+.bukit-biak {
+    .table-mobile-responsive {
+        .table {
+
+            tbody.tbody-responsive {
+                display: none;
+            }
+
+            @media screen and (max-width: $breakpoint-xl) {
+                thead {
+                    display: none;
+                }
+
+                tbody {
+                    display: none;
+                }
+
+                .tbody-responsive {
+                    display: block !important;
+                    border: none !important;
+
+                    tr {
+                        display: block;
+                        background-color: transparent !important;
+
+                        td {
+                            position: relative;
+                            display: block;
+                            width: 100%;
+                            border: none !important;
+                            padding: 0 !important;
+                            background-color: transparent !important;
+
+                            .card {
+                                border: 2px solid #ececec;
+
+                                .item-table {
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-bottom: $dt-1 / 2;
+                                }
+
+                                @media screen and (min-width: $breakpoint-sm) {
+                                    .item-table {
+                                        flex-direction: row;
+                                        justify-content: space-between;
+                                    }
+                                }
+
+                                // > div {
+                                //     display: flex;
+                                //     justify-content: space-between;
+                                //     flex-wrap: wrap;
+                                // }
+
+                                // @media screen and (max-width: $breakpoint-md) {
+                                //     > div {
+                                //         flex-direction: column;
+                                //     }
+                                // }
+
+                                .data-table {
+                                    font-size: 0.89em;
+                                    font-weight: 500;
+                                }
+
+                                .desc-table {
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+
+        }
+    }
+    .table {
+        thead {
+            background-color: $palete-main-color;
+            th {
+                color: $main-color;
+                border: none;
+                padding: 0.75rem;
+                font-size: .89em;
+                font-weight: 500;
+            }
+        }
+
+        td {
+            font-weight: 400;
+            vertical-align: middle;
+
+            .btn {
+                margin: 3px;
+            }
+
+            a {
+                &:not(.btn):not(.dropdown-item) {
+                    color: $main-color;
+                    border-bottom: 2px dotted $sidenav-link-color;
+                }
+
+            }
+        }
+
+        &.sortable {
+            > thead {
+                th {
+                    padding-right: 1.5rem;
+                    &:hover {
+                        &:not([data-defaultsort="disabled"]) {
+                            background-color: $palete-main-color !important;
+                        }
+                    }
+
+                    &::after {
+                        right: 10px;
+                        font-family: 'Line Awesome Free';
+                        font-weight: 900;
+                        font-size: 16px;
+                        color: $main-color;
+                        top: 40%;
+                    }
+
+                    &.az {
+                        &.nosort {
+                            &::after {
+                                content:"\f15d";
+
+                            }
+                        }
+                        &.up {
+                            &::after {
+                                content:"\f0de";
+                                font-size: 16px;
+
+                            }
+                        }
+
+                        &.down {
+                            &::after {
+                                content:"\f0dd";
+                                font-size: 16px;
+                                opacity: 1;
+                            }
+                        }
+
+                    }
+                }
+            }
+
+            span {
+                &.arrow {
+                    display: none;
+                }
+            }
+        }
+
+
+    }
+
+}

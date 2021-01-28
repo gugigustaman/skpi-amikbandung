@@ -1,0 +1,380 @@
+@font-face {
+    font-family: "AvantGarde";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/AvantGarde-Bold/AvantGarde-Bold.woff2") format("woff2");
+}
+
+.bukit-biak {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-size: 14px;
+}
+
+
+.bukit-biak .authentication-3 {
+    padding: .75em 0;
+    background-color: #279220;
+}
+
+.bukit-biak .authentication-inner {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.bukit-biak .logo-box {
+    position: relative;
+    width: 200px;
+}
+
+.bukit-biak .logo-box img {
+    width: 100%;
+    height: auto;
+}
+
+.bukit-biak .banner-signbox {
+    position: relative;
+    border-radius: 30px;
+    background: url(../img/bg-footer.jpg) bottom no-repeat #fff;
+    background-size: contain;
+    padding-bottom: 10em !important;
+    justify-content: center;
+}
+
+
+
+.bukit-biak .banner-signbox .title-box h2 {
+    font-weight: 300;
+    margin: 20px 0 10px;
+}
+
+.bukit-biak .banner-signbox .title-box h2 span {
+    font-family: "AvantGarde";
+}
+
+.bukit-biak .logo-box-form {
+    position: relative;
+    width: 150px;
+}
+
+.bukit-biak .logo-box-form img {
+    width: 100%;
+    height: auto;
+}
+
+
+.bukit-biak .form-group {
+    margin-bottom: 2em;
+}
+
+
+.bukit-biak .form-group label {
+	color: #ccc;
+	position: relative;
+	line-height: 1;
+    font-size: 1em;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+	background-color: transparent;
+	padding: 5px 10px;
+	margin: 0;
+	z-index: 2;
+}
+
+.bukit-biak .form-group label.absolute {
+    position: absolute;
+    top: 10px;
+	left: 0;
+}
+
+.bukit-biak .form-group label.custom-control-label {
+    padding: 5px 0;
+    color: #555;
+}
+
+.bukit-biak .form-group .input-group label.absolute {
+    left: 40px;
+}
+
+.bukit-biak .form-group.checkbox label {
+	left: 0;
+	top: 0 !important;
+}
+
+.bukit-biak .form-group.focus label.absolute, 
+.bukit-biak .form-group.completed label.absolute,
+.bukit-biak .form-group.focused label.absolute {
+	top: -10px;
+    font-size: .85em;
+    background-color: #fff;
+    z-index: 4;
+}
+
+.bukit-biak .authentication-inner .form-group.focus label.absolute, 
+.bukit-biak .authentication-inner .form-group.completed label.absolute,
+.bukit-biak .authentication-inner .form-group.focused label.absolute {
+    background-color: #279220;
+}
+
+.bukit-biak .input-group-prepend {
+    margin-right: -1px;
+}
+
+.bukit-biak .input-group-append {
+    margin-left: -1px;
+}
+
+.bukit-biak .input-group-text {
+    padding: .625rem .75rem;
+    color: #ccc;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: transparent;
+    align-items: center;
+    transition: .3s;
+}
+
+
+.bukit-biak .input-group-text i {
+    font-size: 1.5rem;
+}
+
+.form-control {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    display: block;
+    width: 100%;
+    height: calc(1.65em + 1.25rem + 4px);
+    padding: .625rem .75rem;
+    transition: .3s;
+    color: #555;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: transparent;
+    background-clip: padding-box;
+    box-shadow: 0 3px 2px rgba(233, 236, 239, .05);
+    z-index: 3;
+}
+
+.authentication-inner .form-control {
+    color: #fff;
+}
+
+.bukit-biak .form-group .input-group > .input-group-prepend + label + .form-control {
+    border-left: none;
+  }
+
+.focused .form-control {
+    color: #555;
+    border-color: #279220;
+    outline: 0;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+
+.focused .input-group-text {
+    border-color: #279220;
+    
+}
+
+.focused .form-control { 
+    color: #fff;
+    border-color: #ffcc56;
+}
+
+.bukit-biak .focused .input-group-text {
+    border-color: #ffcc56;
+}
+
+.box-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.5em;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* BUTTON */
+
+.btn {
+    font-size: .875rem;
+    position: relative;
+    letter-spacing: .025em;
+    text-transform: none;
+    will-change: transform;
+    font-weight: 400;
+    line-height: 1.5;
+    display: inline-block;
+    padding: .625rem 1.25rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    color: #525f7f;
+    border: 1px solid transparent;
+    border-radius: 10rem;
+    background-color: transparent;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    text-transform: uppercase;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn:hover:not([class*=btn-outline-]) {
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08)
+}
+
+.btn:not(:last-child) {
+    margin-right: .5rem
+}
+
+.btn i:not(:first-child),
+.btn svg:not(:first-child) {
+    margin-left: .5rem
+}
+
+.btn i:not(:last-child),
+.btn svg:not(:last-child) {
+    margin-right: .5rem
+}
+
+.btn-group .btn,
+.input-group .btn {
+    margin-right: 0;
+    transform: translateY(0)
+}
+
+.btn-group-sm>.btn,
+.btn-sm {
+    font-size: .75rem
+}
+
+.btn-group-lg>.btn,
+.btn-lg {
+    font-size: .875rem
+}
+
+[class*=btn-outline-] {
+    border-width: 1px
+}
+
+.btn-inner--icon i:not(.fas):not(.fab) {
+    position: relative;
+    top: 2px;
+    font-size: 1.175rem;
+}
+
+.btn-link {
+    font-weight: 600;
+    box-shadow: none
+}
+
+.btn-link:hover {
+    transform: none;
+    box-shadow: none
+}
+
+.btn-neutral {
+    color: #5d878f
+}
+
+
+@media (prefers-reduced-motion:reduce) {
+    .btn {
+        transition: none
+    }
+}
+
+.btn:hover {
+    text-decoration: none;
+    color: #525f7f
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08)
+}
+
+.btn.disabled,
+.btn:disabled {
+    opacity: .65;
+    box-shadow: none
+}
+
+.btn:not(:disabled):not(.disabled).active,
+.btn:not(:disabled):not(.disabled):active {
+    box-shadow: none
+}
+
+.btn:not(:disabled):not(.disabled).active:focus,
+.btn:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08)
+}
+
+a.btn.disabled,
+fieldset:disabled a.btn {
+    pointer-events: none
+}
+
+.btn-primary {
+    color: #fff;
+    border-color: #ffcc56;
+    background-color: #ffcc56;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08)
+}
+
+.btn-primary:hover {
+    color: #fff;
+    border-color: #ffcc56;
+    background-color: #ffcc56
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08), 0 0 0 0 rgba(94, 114, 228, .5)
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: #fff;
+    border-color: #ffcc56;
+    background-color: #ffcc56
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    border-color: #e7b642;
+    background-color: #e7b642;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none, 0 0 0 0 rgba(94, 114, 228, .5)
+}
+
+.custom-control.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before,
+.custom-control.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before,
+.custom-control.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #ffcc56;
+    background-color: #ffcc56;
+}
+
+ 
