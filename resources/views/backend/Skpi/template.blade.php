@@ -405,6 +405,17 @@
         				@endforeach
         			</ol>
         			@endforeach
+
+                    <div class="subheader">B. Aktivitas Prestasi dan Penghargaan</div>
+
+                    @foreach ($kegiatan as $k)
+                    <div class="subtitle">Mahasiswa {{ $k->deskriptor }}:</div>
+                    <ol>
+                        @foreach ($k->sertifikasi as $s)
+                        <li>{{ $s->getName() }}</li>
+                        @endforeach
+                    </ol>
+                    @endforeach
         		</div>
         		<div class="section legalization">
         			<div class="header">04. PENGESAHAN SKPI</div>

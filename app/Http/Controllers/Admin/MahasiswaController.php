@@ -13,6 +13,7 @@ use App\Models\ProgramStudi;
 use App\Models\Kelas;
 use App\Models\KualifikasiNilai;
 use App\Models\JenjangPendidikan;
+use App\Models\JenisKegiatan;
 use App\Models\Gelar;
 use App\Models\ProfileKampus;
 use App\Models\Sertifikasi;
@@ -201,6 +202,10 @@ class MahasiswaController extends Controller{
             $mahasiswa->Skpi = $skpi;
         }
 
+        $kegiatan = JenisKegiatan::whereHas('sertifikasi', function($q) use ($id) {
+            $q->where('mahasiswa_id', $id);
+        })->get();
+
         $now = Carbon::now();
 
         $data = [
@@ -210,6 +215,7 @@ class MahasiswaController extends Controller{
             'kampus' => ProfileKampus::first(),
             'deskriptor' => Deskriptor::all(),
             'kualifikasi_nilai' => $kualifikasi_nilai,
+            'kegiatan' => $kegiatan,
             'en_date' => $now->format('F j, Y'),
             'id_date' => $this->indonesian_date($now, 'j F Y'),
         ];
